@@ -1,0 +1,31 @@
+
+@baseUrl = http://localhost:5000/api/v1
+
+# создание продукта
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "username": "Sven"
+}
+###
+# создание продукта
+POST {{baseUrl}}/announcements/
+Content-Type: application/json
+
+{
+    "title":"ne podderjivaet utf8",
+    "text":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa mnogo",
+    "user_id": "1"
+}
+###
+
+# получение продуктов
+GET {{baseUrl}}/announcements/1/
+Content-Type: application/json
+
+###
+
+# обновление продукта
+DELETE  {{baseUrl}}/announcements/1/
+Content-Type: application/json
